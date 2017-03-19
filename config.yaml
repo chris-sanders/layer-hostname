@@ -1,0 +1,14 @@
+options:
+  hostname:
+    type: string
+    default: "defaultHostName"
+    description: "The host name to set"
+#  boolean-option:
+#    type: boolean
+#    default: False
+#    description: "A short description of the configuration option"
+#  int-option:
+#    type: int
+#    default: 9001
+#    description: "A short description of the configuration option"
+

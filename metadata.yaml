@@ -1,0 +1,22 @@
+name: hostname
+summary: Adds an option to set hostname
+maintainer: Chris <sanders.chris@gmail.com>
+description: |
+  This is a simple subordinate charm that allows you to se the hostname
+tags:
+  # Replace "misc" with one or more whitelisted tags from this list:
+  # https://jujucharms.com/docs/stable/authors-charm-metadata
+  - misc
+subordinate: false
+series:
+  - xenial
+#provides:
+#  provides-relation:
+#    interface: interface-name
+#requires:
+#  juju-info:
+#    interface: juju-info
+#    scope: container
+#peers:
+#  peer-relation:
+#    interface: interface-name
