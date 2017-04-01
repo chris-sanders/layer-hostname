@@ -9,7 +9,7 @@ def update_hostname():
     if hostname is not 'defaultHostName':
         with open('/etc/hostname','w') as file:
             file.write(hostname)
-        subprocess.call(['sudo','hostname',hostname])
+        subprocess.call(['hostname',hostname])
         # Need to replace /etc/hosts line as well
  
 @when_not('layer-hostname.installed')
