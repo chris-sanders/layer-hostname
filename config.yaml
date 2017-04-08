@@ -1,6 +1,6 @@
 options:
   hostname:
     type: string
-    default: "defaultHostName"
+    default: ""
     description: "The host name to set"
 

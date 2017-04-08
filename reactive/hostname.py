@@ -6,7 +6,7 @@ import subprocess
 def update_hostname():
     config = hookenv.config()
     hostname = config['hostname'] 
-    if hostname is not 'defaultHostName':
+    if hostname is not "":
         with open('/etc/hostname','w') as file:
             file.write(hostname)
         subprocess.call(['hostname',hostname])
