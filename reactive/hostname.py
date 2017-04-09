@@ -10,7 +10,9 @@ def update_hostname():
         with open('/etc/hostname','w') as file:
             file.write(hostname)
         subprocess.call(['hostname',hostname])
-        # Need to replace /etc/hosts line as well
+        subprocess.check_call(['dhclient','-r'])
+        subprocess.check_call(['dhclient'])
+        # TODO Need to replace /etc/hosts line as well
  
 @when_not('layer-hostname.installed')
 def install_layer_hostname():
