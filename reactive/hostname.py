@@ -5,7 +5,10 @@ import subprocess
 @when('config.changed.hostname')
 def update_hostname():
     config = hookenv.config()
-    hostname = config['hostname'] 
+    if config['hostname'] == "$UNIT":
+        hostname = hookenv.local_unit().replace('/','-')
+    else:
+        hostname = config['hostname']
     if hostname is not "":
         with open('/etc/hostname','w') as file:
             file.write(hostname)
