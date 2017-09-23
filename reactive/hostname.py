@@ -17,11 +17,9 @@ def update_hostname():
         subprocess.check_call(['dhclient', '-r'])
         subprocess.check_call(['dhclient'])
         # TODO Need to replace /etc/hosts line as well
- 
+
 
 @when_not('layer-hostname.installed')
 def install_layer_hostname():
     update_hostname()
     set_state('layer-hostname.installed')
-
-
